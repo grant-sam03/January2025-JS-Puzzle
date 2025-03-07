@@ -1,63 +1,63 @@
-Jane Street "Somewhat Square Sudoku Solver"
+# Sudoku Solver+
 
-This repository contains an optimized solver for Jane Street's "Somewhat Square Sudoku Puzzle" from January 2025, written in C++. The puzzle involves filling a 9x9 Sudoku grid with digits such that each row, column, and 3x3 sub-grid contains nine unique digits (selected from 0-9), with the goal of maximizing the greatest common divisor (GCD) of the 9-digit numbers formed by each row.
+Optimized C++ solver for Jane Street’s **Somewhat Square Sudoku Puzzle** (January 2025)  
+_Maximize the GCD of the 9-digit row numbers while satisfying classic Sudoku constraints_
 
-Puzzle Information
+---
 
-Puzzle Link: Jane Street "Somewhat Square Sudoku Puzzle"
+## Overview
 
- ![image](https://github.com/user-attachments/assets/d9f201c5-1540-44af-9345-27298fc36dcd)
+**Sudoku Solver+** is an optimized solver written in C++ for Jane Street’s challenging **Somewhat Square Sudoku Puzzle**.  
+This puzzle requires filling a 9x9 grid so that every row, column, and 3x3 sub-grid contains nine unique digits (selected from 0-9) while **maximizing the GCD** of the nine 9-digit numbers formed by each row. The solver leverages advanced algorithmic techniques, including multithreading, recursive backtracking, and bit-level optimizations to efficiently navigate the immense search space.
+
+---
+
+## Puzzle Information
+
+- **Puzzle Name:** Jane Street “Somewhat Square Sudoku Puzzle”
+- **Puzzle Date:** January 2025
+- **Puzzle Link:** [Jane Street Somewhat Square Sudoku Puzzle](https://www.janestreet.com/puzzles/somewhat-square-sudoku-index/)
 
 
-Key Features
+![image](https://github.com/user-attachments/assets/cb4a2245-81c6-4dca-9034-f07fb0e4dd6f)
 
-Permutation Generation: Multithreaded generation of valid candidate numbers, optimized for speed and efficiency.
+---
 
-Optimized Filtering: Leveraged modular arithmetic and bit masking to rapidly eliminate invalid candidates.
+## Key Features
 
-Parallel Processing: Utilized multithreading and asynchronous tasks to efficiently manage computational workload and significantly enhance solver speed.
+- **Permutation Generation:**  
+  Multithreaded generation of valid 9-digit candidate strings (omitting one digit at a time) to ensure only permissible combinations are considered.
 
-Recursive Backtracking: Implemented recursive backtracking with optimized bitwise conflict-checking to quickly find valid solutions.
+- **Optimized Filtering:**  
+  Rapid candidate elimination using modular arithmetic and bit masking to quickly filter out numbers that do not contain the required digits or meet divisibility conditions.
 
-Real-time Progress Monitoring: Included periodic progress updates, allowing users to track solving performance in real-time.
+- **Parallel Processing:**  
+  Utilizes multithreading and asynchronous tasks to distribute the workload, significantly enhancing performance.
 
-Technologies Used
+- **Recursive Backtracking:**  
+  Implements a recursive backtracking approach with optimized bitwise conflict-checking to efficiently traverse possible solutions.
 
-Modern C++ (<thread>, <mutex>, <unordered_set>, <chrono>, <bitset>)
+- **Real-time Progress Monitoring:**  
+  Periodic progress updates allow users to track the solving process, providing detailed insights into candidate attempts and runtime.
 
-Parallel Computing and Asynchronous Execution
+---
 
-Algorithmic Optimizations (bit masking, modular arithmetic)
+## Technologies Used
 
-Puzzle Source
+- **Programming Language:** Modern C++ (C++11 and above)
+- **Parallel Computing:** Multithreading and asynchronous execution
+- **Algorithmic Optimizations:**  
+  - Bit masking  
+  - Modular arithmetic  
+  - Recursive backtracking
 
-Jane Street Somewhat Square Sudoku Puzzle (January 2025)
+---
 
-Outcome
+## Usage
 
-Efficiently solved the puzzle, successfully meeting the unique constraint of maximizing the GCD across all rows.
+Compile and run the solver using any standard C++ compiler. For example, with **g++**:
 
-Demonstrated proficiency in multithreading, algorithmic optimization, and computational problem-solving.
-
-Usage
-
-Compile and run using any standard C++ compiler supporting C++11 or later:
-
-g++ -std=c++17 -O3 SudokuBox.cpp -o SudokuSolver
-./SudokuBox
-
-Skills Highlighted
-
-Algorithmic optimization
-
-Multithreaded and concurrent programming
-
-Computational efficiency and performance profiling
-
-Please Note: This has ~40hr runtime :) (not sure how to optimize it anymore)
-
-Complex logic implementation and debugging
-
-Puzzle Reference
-
-Jane Street's Somewhat Square Sudoku (January 2025)
+```bash
+g++ -std=c++17 -O3 SudokuBox.cpp -o SudokuSolver+
+./SudokuSolver+
+Note: The solver has an approximate runtime of ~40 hours. Further optimization may be necessary depending on your system.
